@@ -1,0 +1,7 @@
+body{
+    background-color: plum;
+
+    @media (min-width: 50em) {
+        background-color: purple;
+    }
+}
