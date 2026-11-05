@@ -1,0 +1,9 @@
+*{
+    color-scheme: light dark;
+}
+
+body {
+    max-width: 600px;
+    margin: auto; /*automatisch*/
+    padding: 1em;
+}
