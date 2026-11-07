@@ -4,7 +4,7 @@
     --yellow: #FFCB44;
     margin: 0;
     padding: 0;
-
+    /* color scheme moet in global.cc*/
 }
 
 body{
@@ -41,5 +41,5 @@ main{
     position: fixed;
     bottom: 0;
     right: -25vh;
-    z-index: -100;
+    z-index: -100; /* dit moet naar global.cc; dit stukje html gaat op meerdere pagina's voorkomen */
 }
