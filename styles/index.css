@@ -1,0 +1,23 @@
+*{
+    --main-bg-color: #FF749D;
+    --main-accent: #690000;
+    --yellow: #FFCB44;
+}
+
+body{
+    background-color: var(--main-bg-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.mc {
+    height: 95vh;
+    position: fixed;
+    bottom: 0;
+    right: -25vh;
+    z-index: -100;
+}
