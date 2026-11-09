@@ -32,6 +32,8 @@ h1 {
 }
 
 .yellowDiv{
+    position:relative; /* zodat deze gele div achter de li's before komt te staan */
+    z-index: -2;
     grid-area: yellowbar;
     height: 100vh;
     background-color: var(--yellow);
@@ -39,19 +41,60 @@ h1 {
 
 main{
     margin-top: .5rem;
-    margin-left: .25rem;
     grid-area: main;
 
     ul {
         list-style: square;
+        width: fit-content; /* zodat de li's niet over het hele scherm gaan*/
     }
 
     ::marker {
         color: var(--main-accent);
     }
 
+    li{
+        position: relative;
+        &::before{ /* deze before bestaat enkel en alleen omdat de background color van de marker niet gestyled kan worden :P */
+
+            content: "a"; /* deze is hier om te zorgen dat de ::before precies even hoog is als de tekst ernaast (er moet een betere manier zijn hiervoor) */
+            padding-block: .1rem; /* omdat de linkjes dit ook hebben*/
+            position: absolute;
+            left: -3rem;
+            top: 0;
+            width: 3rem;
+            z-index: -1;
+        }
+
+        &:has(a:hover, a:focus) { /* als de a binnen deze li gehoverd wordt */
+            &::marker {
+                color: var(--yellow);
+            }
+
+            &::before{
+                background-color: var(--main-accent);
+                
+            }
+
+            a{                
+                outline: none;
+                background-color: var(--main-accent);
+                color: #FFF;
+                border-radius: 0 .4em .4em 0;
+            }
+        }
+
+        
+    }
+
+    
+
     a{
+        pointer-events: auto;
         color: var(--main-accent);
+        padding-inline: .5rem;
+        padding-block: .1rem;
+        text-decoration: none;
+        display: block; /* om te zorgen dat de behavior is zoals ik wil, en ik wil dat ze allemaal even breed zijn*/
     }
 }
 
