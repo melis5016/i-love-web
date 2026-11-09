@@ -34,6 +34,14 @@ body{
     &:has(.genderer:checked){ /* als de genderer aangevinkt is, verander de kleuren */
         --bg-color: var(--blue-bg-color);
         --accent: var(--blue-accent);
+
+        .kotone{
+            display: none;
+        }
+
+        .makoto{
+            display: unset;
+        }
     }
 }
 
@@ -120,4 +128,8 @@ main{
     bottom: 0;
     right: -25vh;
     z-index: -100; /* dit moet naar global.css; dit stukje html gaat op meerdere pagina's voorkomen */
+}
+
+.makoto{
+    display: none; /* makoto is niet de default, dus die is er niet gelijk*/
 }
