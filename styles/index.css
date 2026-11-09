@@ -1,15 +1,28 @@
 *{
-    --main-bg-color: #FF749D;
-    --main-accent: #690000;
-    --yellow: #FFCB44;
     margin: 0;
     padding: 0;
     font-size: 20px;
     /* color scheme moet in global.cc*/
 }
 
+:root{
+    /* kotone's kleuren */
+    --pink-bg-color: #FF749D;
+    --pink-accent: #690000;
+
+    /* makoto's kleuren */
+    --blue-bg-color: #2392FD;
+    --blue-accent: #013C5E;
+
+    /* default is kotone */
+    --bg-color: var(--pink-bg-color);
+    --accent: var(--pink-accent);
+
+    --yellow: #FFCB44;
+}
+
 body{
-    background-color: var(--main-bg-color);
+    background-color: var(--bg-color);
     min-height: 100vh;
     display: grid;
     grid-template-columns: 2rem 1fr;
@@ -17,6 +30,11 @@ body{
     grid-template-areas: 
         "yellowbar header"
         "yellowbar main";
+
+    &:has(.genderer:checked){ /* als de genderer aangevinkt is, verander de kleuren */
+        --bg-color: var(--blue-bg-color);
+        --accent: var(--blue-accent);
+    }
 }
 
 header {
@@ -49,7 +67,7 @@ main{
     }
 
     ::marker {
-        color: var(--main-accent);
+        color: var(--accent);
     }
 
     li{
@@ -71,13 +89,13 @@ main{
             }
 
             &::before{
-                background-color: var(--main-accent);
+                background-color: var(--accent);
                 
             }
 
             a{                
                 outline: none;
-                background-color: var(--main-accent);
+                background-color: var(--accent);
                 color: #FFF;
                 border-radius: 0 .4em .4em 0;
             }
@@ -86,11 +104,9 @@ main{
         
     }
 
-    
-
     a{
         pointer-events: auto;
-        color: var(--main-accent);
+        color: var(--accent);
         padding-inline: .5rem;
         padding-block: .1rem;
         text-decoration: none;
@@ -99,10 +115,9 @@ main{
 }
 
 .mc {
-    grid-area: mc;
     height: 95vh;
     position: fixed;
     bottom: 0;
     right: -25vh;
-    z-index: -100; /* dit moet naar global.cc; dit stukje html gaat op meerdere pagina's voorkomen */
+    z-index: -100; /* dit moet naar global.css; dit stukje html gaat op meerdere pagina's voorkomen */
 }
