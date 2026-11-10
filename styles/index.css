@@ -1,7 +1,13 @@
+@font-face {
+    font-family: chiaro;
+    src: url("../assets/fonts/chiarostd_b.otf");
+}
+
 *{
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.5rem;
     /* color scheme moet in global.cc*/
 }
 
@@ -22,11 +28,12 @@
 }
 
 body{
+    font-family: chiaro, fantasy;
     background-color: var(--bg-color);
     min-height: 100vh;
     display: grid;
     grid-template-columns: 2rem 1fr;
-    grid-template-rows: 2rem 1fr;
+    grid-template-rows: 4rem 1fr;
     grid-template-areas: 
         "yellowbar header"
         "yellowbar main";
@@ -54,7 +61,10 @@ header {
 
 h1 {
     color: var(--yellow);
-    font-size: 40px;
+    font-size: 3rem;
+    &::first-letter{
+        text-shadow: -.1em 0px var(--yellow);
+    }
 }
 
 .yellowDiv{
