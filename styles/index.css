@@ -33,7 +33,7 @@ body{
     radial-gradient( 150% 165%
         at -20% 120%,
         var(--bg-color) 75%, 
-        var(--accent) 75%
+        var(--accent) calc(75% + 2px)
     );
     min-height: 100vh;
     display: grid;
