@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Css Strategie</h1>
+        <section>
+            <h2>3 dingen die ik vandaag heb geleerd over css?</h2>
+            <ul>
+                <li>css gebruikt binaire getallen om sepcificity te berekenen</li>
+                <li>de root, html en body selectors(?) doen basically hetzelfde in css (het is allemaal de root vgm?)</li>
+                <li>css variabelen kunnen fallbacks hebben! (bijvoorbeeld color: var(--main-color, blue))</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>wat is css cascade en css specificty? (eigen woorden, met een tekening)</h2>
+            <article>
+                <h3>cascade</h3>
+                <p>cascade is, voor zover ik het begrijp, de manier waarop css beslist welke regels te gebruiken als er meerdere regels over het zelfde stukje html gaan. bijvoorbeeld als er *{margin: 0} staat, en ook h2{margin: 0.5rem} staat. of als je zegt dat al je p's rood moeten zijn, maar p's met een specifieke class wit moeten zijn, dat css weet waar precies naar geluisterd moet worden. de cascade wil dus zeggen hoe css besluit welke regels het belangrijkst zijn en dat die toegepast worden in plaats van minder belangrijke regels</p>
+            </article>
+            
+            <article>
+                <h3>specificity</h3>
+                <p>specificity is onderdeel van hoe de cascade besluit welke regels het belangrijkst zijn. Specificity wil zeggen: op hoe minder elementen dit van toepassing kan zijn, hoe belangrijker het is. regels op bijvoorbeeld alle P elementen zijn het minst belangrijk, daarna regels die in een class voorkomen, dan regels die in een ID voorkomen en tot slot regels die in inline css voorkomen</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>links met voorbeelden en bronnen?</h2>
+            <a href="https://www.gestaltprinciples.com/">gestalt principles</a>
+        </section>
+
+        <section>
+            <h2>in welke nieuwe css feature wil ik me verdiepen de komende tijd?</h2>
+            <p>Krijn had gezegd dat @layer handig/interressant is, dus misschien die?</p>
+        </section>
+    </main>
+</body>
+</html>
